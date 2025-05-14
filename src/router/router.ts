@@ -3,24 +3,61 @@ import {
   createRootRoute,
   createRoute,
   createRouter,
+  redirect,
 } from "@tanstack/react-router";
 import { HomeLayout } from "@/layout/HomeLayout";
-import { Home, About } from "@/pages";
+import { Compare, Dashboard, Delete, EditSummary, Photo } from "@/pages";
 
 const rootRoute = createRootRoute({ component: HomeLayout });
 
-const homeRoute = createRoute({
+const indexRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/",
-  component: Home,
+  beforeLoad: () => {
+    throw redirect({
+      to: "/compare",
+      replace: true,
+    });
+  },
 });
 
-const aboutRoute = createRoute({
+const compareRoute = createRoute({
   getParentRoute: () => rootRoute,
-  path: "/about",
-  component: About,
+  path: "/compare",
+  component: Compare,
 });
 
-const routeTree = rootRoute.addChildren([homeRoute, aboutRoute]);
+const dashboardRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/dashboard",
+  component: Dashboard,
+});
+
+const deleteRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/delete",
+  component: Delete,
+});
+
+const editRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/edit",
+  component: EditSummary,
+});
+
+const photoRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/photo",
+  component: Photo,
+});
+
+const routeTree = rootRoute.addChildren([
+  indexRoute,
+  compareRoute,
+  dashboardRoute,
+  deleteRoute,
+  editRoute,
+  photoRoute,
+]);
 
 export const router = createRouter({ routeTree });
