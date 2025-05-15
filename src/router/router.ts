@@ -6,7 +6,16 @@ import {
   redirect,
 } from "@tanstack/react-router";
 import { HomeLayout } from "@/layout/HomeLayout";
-import { Compare, Dashboard, Delete, EditSummary, Photo } from "@/pages";
+import {
+  Home,
+  Compare,
+  Dashboard,
+  Delete,
+  EditSummary,
+  Photo,
+  Models,
+  Admin,
+} from "@/pages";
 
 const rootRoute = createRootRoute({ component: HomeLayout });
 
@@ -15,10 +24,16 @@ const indexRoute = createRoute({
   path: "/",
   beforeLoad: () => {
     throw redirect({
-      to: "/compare",
+      to: "/home",
       replace: true,
     });
   },
+});
+
+const homeRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/home",
+  component: Home,
 });
 
 const compareRoute = createRoute({
@@ -45,10 +60,22 @@ const editRoute = createRoute({
   component: EditSummary,
 });
 
+const modelRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/model",
+  component: Models,
+});
+
 const photoRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/photo",
   component: Photo,
+});
+
+const adminRoute = createRoute({
+  getParentRoute: () => rootRoute,
+  path: "/admin",
+  component: Admin,
 });
 
 const routeTree = rootRoute.addChildren([
@@ -58,6 +85,9 @@ const routeTree = rootRoute.addChildren([
   deleteRoute,
   editRoute,
   photoRoute,
+  modelRoute,
+  homeRoute,
+  adminRoute,
 ]);
 
 export const router = createRouter({ routeTree });
