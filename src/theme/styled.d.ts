@@ -1,6 +1,11 @@
-import "styled-components";
-import { Theme } from "@mui/material/styles";
+import { PaletteColorOptions } from "@mui/material/styles";
 
-declare module "styled-components" {
-  export interface DefaultTheme extends Theme {}
+declare module "@mui/material/styles" {
+  interface Palette {
+    ochre: Palette["primary"];
+  }
+
+  interface PaletteOptions {
+    ochre?: PaletteColorOptions;
+  }
 }
