@@ -1,9 +1,9 @@
 import { PageWrap } from "@/components/PageWrap/PageWrap";
 
-export const EditSummary = () => {
+export const Admin = () => {
   return (
     <PageWrap>
-      <p>This is the EditSummary page of our application.</p>
+      <p>This is the Admin page of our application.</p>
     </PageWrap>
   );
 };
