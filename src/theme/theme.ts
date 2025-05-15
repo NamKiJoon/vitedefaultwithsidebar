@@ -11,5 +11,11 @@ export const muiTheme = createTheme({
       main: blue[500],
       dark: blue[700],
     },
+    ochre: {
+      main: "#E3D026",
+      light: "#E9DB5D",
+      dark: "#A29415",
+      contrastText: "#242105",
+    },
   },
 });
