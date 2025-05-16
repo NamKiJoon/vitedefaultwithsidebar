@@ -6,6 +6,7 @@ import {
   NotePad,
   TextFieldWrapper,
   SaveBtn,
+  Title,
 } from "./Home.styles";
 import { Button } from "@mui/material";
 import { TextField, Box } from "@mui/material";
@@ -18,7 +19,7 @@ export const Home = () => {
     <PageWrap>
       <PageGrid>
         <HomeText>
-          <h1>노동신문 플랫폼</h1>
+          <Title>노동신문 플랫폼</Title>
           <span>
             <strong>
               노동신문 관련하여 여러가지 인터페이스를 제공하도록 만들어짐.
@@ -53,7 +54,7 @@ export const Home = () => {
           </span>
         </HomeText>
         <HomeMemo>
-          <h1>저장된 메모</h1>
+          <Title>저장된 메모</Title>
           <span>전체 메모 보기</span>
           <Box
             component="form"
@@ -80,7 +81,7 @@ export const Home = () => {
           </Box>
         </HomeMemo>
         <NotePad>
-          <h1>공용 메모장</h1>
+          <Title>공용 메모장</Title>
           <Box
             component="form"
             sx={{ "& .MuiTextField-root": { width: "100%" } }}
@@ -94,7 +95,6 @@ export const Home = () => {
                 rows={1}
                 defaultValue={memo}
                 variant="standard"
-                disabled
                 InputProps={{
                   disableUnderline: true,
                 }}
@@ -115,7 +115,6 @@ export const Home = () => {
                 rows={8}
                 defaultValue={memo}
                 variant="standard"
-                disabled
                 InputProps={{
                   disableUnderline: true,
                 }}
