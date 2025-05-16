@@ -17,6 +17,9 @@ import {
   Admin,
 } from "@/pages";
 
+import { Status } from "@/pages/dashboard/status/Status";
+import { Chart } from "@/pages/dashboard/chart/Chart";
+
 const rootRoute = createRootRoute({ component: HomeLayout });
 
 const indexRoute = createRoute({
@@ -46,6 +49,17 @@ const dashboardRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/dashboard",
   component: Dashboard,
+});
+
+const statusRoute = createRoute({
+  getParentRoute: () => dashboardRoute,
+  path: "/status",
+  component: Status,
+});
+const chartRoute = createRoute({
+  getParentRoute: () => dashboardRoute,
+  path: "/chart",
+  component: Chart,
 });
 
 const deleteRoute = createRoute({
@@ -90,4 +104,5 @@ const routeTree = rootRoute.addChildren([
   adminRoute,
 ]);
 
+dashboardRoute.addChildren([statusRoute, chartRoute]);
 export const router = createRouter({ routeTree });
