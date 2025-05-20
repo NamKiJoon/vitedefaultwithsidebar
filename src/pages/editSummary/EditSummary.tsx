@@ -1,9 +1,13 @@
+import React from "react";
 import { PageWrap } from "@/components/PageWrap/PageWrap";
+import PDFEditorApp from "@/components/PDFEditor/PdfEditorApp";
 
-export const EditSummary = () => {
+export const EditSummary: React.FC = () => {
   return (
     <PageWrap>
-      <p>This is the EditSummary page of our application.</p>
+      <PDFEditorApp />
     </PageWrap>
   );
 };
+
+export default EditSummary;
