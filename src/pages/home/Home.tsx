@@ -46,12 +46,7 @@ export const Home = () => {
           </span>
           <span>4. 관리자 전용: 노동신문 데이터 삭제 가능.</span>
           <span>5. 메모: 작업이나 특이사항 있을 시, 아래에 메모 기입</span>
-          <span>
-            <strong>
-              가끔 표가 안보일때가 있어서 휠 확대 축소 해야함. 작업할때는 좌측
-              사이드바 닫고 하는 것을 추천
-            </strong>
-          </span>
+          <span></span>
         </HomeText>
         <HomeMemo>
           <Title>저장된 메모</Title>
