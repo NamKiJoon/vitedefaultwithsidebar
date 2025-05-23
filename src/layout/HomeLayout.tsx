@@ -7,10 +7,11 @@ export const HomeLayout = () => {
     { label: "Home", to: "/home" },
     // { label: "비교", to: "/compare" },
     { label: "현황판", to: "/dashboard" },
-    { label: "노동신문 수정", to: "/edit" },
+
     { label: "이미지 관리", to: "/photo" },
+    { label: "수정", to: "/edit" },
     // { label: "삭제", to: "/delete" },
-    { label: "모델 재처리", to: "/model" },
+    { label: "재처리", to: "/model" },
     { label: "관리자 전용", to: "/admin" },
   ];
   return (
