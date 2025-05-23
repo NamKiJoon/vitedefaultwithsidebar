@@ -1,3 +1,4 @@
+// /src/components/PDFEditor/styles/CommonStyles.ts
 import styled from "styled-components";
 
 // 메인 컨테이너

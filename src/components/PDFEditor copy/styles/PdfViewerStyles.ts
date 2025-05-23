@@ -1,3 +1,4 @@
+// /src/components/PDFEditor/styles/PdfViewerStyles.ts
 import styled from "styled-components";
 
 // 메인 컨테이너 - 좌우 패널 분할

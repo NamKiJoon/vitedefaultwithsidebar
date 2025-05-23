@@ -1,3 +1,4 @@
+// /src/components/PDFEditor/PdfEditorApp.tsx
 import React, { useState } from "react";
 import PdfViewer from "./PdfViewer";
 import type { PDFEditorAppProps } from "./types";
