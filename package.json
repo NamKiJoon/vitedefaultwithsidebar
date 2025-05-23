@@ -15,8 +15,11 @@
     "@fontsource/roboto": "^5.2.5",
     "@mui/icons-material": "^7.1.0",
     "@mui/material": "^7.1.0",
+    "@mui/x-data-grid": "^8.3.1",
     "@mui/x-date-pickers": "^8.3.1",
+    "@tanstack/react-query": "^5.76.1",
     "@tanstack/react-router": "^1.120.3",
+    "axios": "^1.9.0",
     "clsx": "^2.1.1",
     "dayjs": "^1.11.13",
     "materialui-daterange-picker": "^1.1.92",
@@ -26,6 +29,7 @@
     "react": "^19.1.0",
     "react-day-picker": "^9.7.0",
     "react-dom": "^19.1.0",
+    "react-query": "^3.39.3",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
