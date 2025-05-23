@@ -19,6 +19,8 @@ import {
 
 import { Status } from "@/pages/dashboard/status/Status";
 import { Chart } from "@/pages/dashboard/chart/Chart";
+import { Contents } from "@/pages/editSummary/contents/Contents";
+import { Summation } from "@/pages/editSummary/summation/Summation";
 
 const rootRoute = createRootRoute({ component: HomeLayout });
 
@@ -74,6 +76,17 @@ const editRoute = createRoute({
   component: EditSummary,
 });
 
+const contentsRoute = createRoute({
+  getParentRoute: () => editRoute,
+  path: "/contents",
+  component: Contents,
+});
+const summationRoute = createRoute({
+  getParentRoute: () => editRoute,
+  path: "/summation",
+  component: Summation,
+});
+
 const modelRoute = createRoute({
   getParentRoute: () => rootRoute,
   path: "/model",
@@ -105,4 +118,5 @@ const routeTree = rootRoute.addChildren([
 ]);
 
 dashboardRoute.addChildren([statusRoute, chartRoute]);
+editRoute.addChildren([contentsRoute, summationRoute]);
 export const router = createRouter({ routeTree });
