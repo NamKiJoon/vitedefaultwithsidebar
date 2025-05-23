@@ -15,8 +15,16 @@ export const SelectWrap = styled.div`
     --rdp-range_start-color: #2a2d3e;
   }
 `;
-export const Select = styled.div``;
-export const DataTableWrap = styled.div``;
+export const Select = styled.div`
+  height: 50px;
+  display: flex;
+  align-items: center;
+`;
+export const DataTableWrap = styled.div`
+  .even-row {
+    background-color: rgb(238, 238, 238);
+  }
+`;
 
 export const ButtonBox = styled.div`
   width: 100%;
@@ -32,4 +40,17 @@ export const SelectButton = styled.button`
   /* border: 1px solid red; */
   border-radius: 4px;
   cursor: pointer;
+`;
+export const NavButton = styled.button`
+  padding: 8px 16px;
+  font-weight: 400;
+  background: #2a2d3e;
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    opacity: 0.9;
+  }
 `;
