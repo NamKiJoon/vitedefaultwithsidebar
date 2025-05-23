@@ -1,5 +1,4 @@
 import { PageWrap } from "@/components/PageWrap/PageWrap";
-import { PageGrid } from "@/components/PageGrid/PageGrid";
 import { Link, Outlet, useLocation, useNavigate } from "@tanstack/react-router";
 import { NavWrap, NavButton, DashboardWrap } from "./Dashboard.styles";
 import { useEffect } from "react";
